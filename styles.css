@@ -1,0 +1,166 @@
+:root {
+  --title: #fffcf9;
+  --subtitle: #b3b3b3;
+  --bg-button: #e9e6e3;
+  --background: linear-gradient(
+    67.08deg,
+    #1e46a3 0%,
+    #000000 48.94%,
+    #c12a23 99.97%
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+
+  background: var(--background);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 126px;
+}
+
+.header h1 {
+  font-weight: 700;
+  font-size: 40px;
+
+  color: #fffcf9;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 30px;
+}
+
+main p {
+  width: 27%;
+  font-weight: 400;
+  font-size: 14px;
+
+  text-align: center;
+
+  color: #fffcf9;
+
+  margin-top: 26px;
+}
+
+button {
+  width: 180px;
+  height: 47px;
+
+  background: white url("/assets/shuffle.svg") no-repeat 14px/35px 25px;
+  border: none;
+
+  text-align: right;
+  padding-right: 18px;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#movie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+
+  margin-top: 30px;
+}
+
+.container-description,
+#error-message {
+  width: 28%;
+}
+
+.container-poster {
+  width: 12%;
+}
+.movie-poster {
+  width: 100%;
+}
+
+.movie-title {
+  color: var(--title);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.movie-description,
+.movie-popularity {
+  color: var(--title);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px){
+  body {
+    background: linear-gradient(
+      37.19deg,
+      #1e46a3 3.83%,
+      #000000 50.5%,
+      #c12a23 85.86%
+    );
+  }
+
+  .header {
+    margin-top: 50px;
+  }
+
+  .header h1 {
+    width: 86%;
+    text-align: center;
+  }
+
+  #movie {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .container-poster {
+    width: 45.5%;
+  }
+
+  .container-description,
+  #error-message {
+    width: 86%;
+  }
+
+  .movie-title {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  .movie-description,
+  .movie-popularity {
+    text-align: center;
+  }
+
+  main p {
+    width: 90%;
+    text-align: center;
+    font-size: 12px;
+  }
+}
